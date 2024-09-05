@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    print(chr(i), end="")
+arr = "abcdefghijklmnopqrstuvwxyzguillaume"
+for i in arr:
+    print(f"{i}", end=""0)
