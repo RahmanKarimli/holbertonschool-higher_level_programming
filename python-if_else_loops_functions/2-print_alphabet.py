@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-arr = "abcdefghijklmnopqrstuvwxyzguillaume"
+arr = "abcdefghijklmnopqrstuvwxyz"
 for i in arr:
     print("{}".format(i), end="")
