@@ -12,8 +12,9 @@ def roman_to_int(roman_string):
         'M': 1000
     }
     sum = 0
-    for i in range(len(roman_string)): #2
-        if (i < len(roman_string) - 1 and nums[roman_string[i]] < nums[roman_string[i + 1]]):
+    ln = len(roman_string)
+    for i in range(ln):
+        if (i < ln - 1 and nums[roman_string[i]] < nums[roman_string[i + 1]]):
             sum -= nums[roman_string[i]]
         else:
             sum += nums[roman_string[i]]
