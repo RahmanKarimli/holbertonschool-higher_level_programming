@@ -7,11 +7,11 @@
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer()
+>>> add()
 Traceback (most recent call last):
   File "/Users/rahman/Downloads/holberton/Python/main.py", line 21, in <module>
     add_integer()
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
->>> add_integer(2.1, 3)
+>>> add(2.1, 3)
 5
