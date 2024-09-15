@@ -27,7 +27,7 @@ Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
 >>> math = __import__("math")
->>> add_integer(math.nan, math.nan)
+>>> add(math.nan, math.nan)
 Traceback (most recent call last):
   File "/Users/rahman/Downloads/holberton/Python/main.py", line 21, in <module>
     print(add_integer(math.nan, math.nan))
