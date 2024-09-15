@@ -37,3 +37,9 @@ Traceback (most recent call last):
            ^^^^^^
 ValueError: cannot convert float NaN to integer
 
+>>> add()
+Traceback (most recent call last):
+  File "./0-add_integer.py", line 24, in <module>
+    add_integer()
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
