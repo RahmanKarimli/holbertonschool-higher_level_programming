@@ -4,12 +4,10 @@ def add_integer(a, b=98):
     """
     function that adds 2 numbers
     """
-    try:
-        a = int(a)
-    except (ValueError, TypeError):
+    lst = [int, float]
+
+    if (type(a) not in lst):
         raise TypeError("a must be an integer")
-    try:
-        b = int(b)
-    except (ValueError, TypeError):
+    if (type(b) not in lst):
         raise TypeError("b must be an integer")
-    return a + b
+    return int(a) + int(b)
