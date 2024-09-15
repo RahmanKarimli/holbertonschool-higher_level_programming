@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""text_indentation"""
+"""Module containing text_indentation function"""
 
 
 def text_indentation(text):
-    """text_indentation"""
+    """Function printing text with two blank lines after each of ?, : and ."""
+
+    # Checking if text is a string
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    result = ""
-    for char in text:
-        result += char
-        if char in ['.', '?', ':']:
-            result += "\n\n"
-    lines = result.splitlines()
-    stripped_lines = [line.strip() for line in lines]
-    final_text = "\n".join(stripped_lines)
-    print(final_text)
+    # Changing the text for signs
+    for char in ".:?":
+        text = text.replace(char, char + "\n\n")
+
+    # Printing the text
+    print("\n".join(line.strip() for line in text.split("\n")), end="")
