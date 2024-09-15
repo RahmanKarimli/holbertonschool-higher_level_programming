@@ -3,7 +3,7 @@
 >>> say_my_name("Rahman", "Karimli")
 My name is Rahman Karimli
 
->>> say_my_name("Rahman")
+>>> say_my_name("Rahman") # doctest: +ELLIPSIS
 My name is Rahman
 
 >>> say_my_name(12)
