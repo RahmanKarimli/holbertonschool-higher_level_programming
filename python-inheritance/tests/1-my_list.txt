@@ -1,14 +1,14 @@
 >>> MyList = __import__('1-my_list').MyList
->>> prnt = MyList.print_sorted
+>>> print_sorted = MyList.print_sorted
 
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(2)
->>> my_list.prnt()
+>>> my_list.print_sorted()
 [1, 2]
 
 >>> my_list.clear()
->>> my_list.prnt()
+>>> my_list.print_sorted()
 []
 
 >>> my_list.append(-1)
@@ -18,7 +18,7 @@
 >>> my_list.clear()
 >>> my_list.append("a")
 >>> my_list.append("b")
->>> a = my_list.prnt()
+>>> a = my_list.print_sorted()
 ['a', 'b']
 
 >>> print(a)
