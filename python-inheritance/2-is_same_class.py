@@ -4,6 +4,6 @@
 
 def is_same_class(obj, a_class):
     """function"""
-    if obj.__class__ == a_class or a_class == object:
+    if type(obj) == a_class:
         return True
     return False
