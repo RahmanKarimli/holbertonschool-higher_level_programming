@@ -12,7 +12,7 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
-    with open("test.csv", "w", newline='') as f:
+    with open("posts.csv", "w", newline='') as f:
         data = json.loads(resopnse.text)
         fieldnames = ["id", "title", "body"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
