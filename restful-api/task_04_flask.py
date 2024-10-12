@@ -1,12 +1,8 @@
-#!/usr/bin/python3
-"""python"""
 from flask import Flask, jsonify, request
 
 
 app = Flask(__name__)
-users = {"jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-         "rahman": {"username": "rahman", "name": "Rahman", "age": 18, "city": "Baku"},
-         "fidan": {"username": "fidan", "name": "Fidan", "age": 28, "city": "Ganja"}}
+users = {}
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
@@ -33,8 +29,10 @@ def add():
 
 @app.route("/users/<username>")
 def user(username):
+    if username is None:
+        return jsonify({'error': 'Username is required'}), 400
     if users.get(username) is None:
-        return {"error": "User not found"}
+        return {"error": "User not found"}, 404
     return jsonify(users.get(username)), 200
 
 @app.route("/status")
@@ -42,4 +40,4 @@ def status():
     return "OK"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
