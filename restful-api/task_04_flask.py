@@ -24,7 +24,7 @@ def add():
     if user["username"] is None:
         return {"error":"Username is required"}, 400
     users[data.get("username")] = user
-    return f"user added", 201
+    return jsonify({'message': 'User added', 'user': user}), 201
 
 
 @app.route("/users/<username>")
