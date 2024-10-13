@@ -5,7 +5,7 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 
 
 app = Flask(__name__)
-app.config['JWT_SECRET_KEY'] = 'my secret key'
+app.config['JWT_SECRET_KEY'] = 'superincredibleamazingsecretkey'
 jwt = JWTManager(app)
 auth = HTTPBasicAuth()
 
