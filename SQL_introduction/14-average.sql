@@ -1,2 +1,2 @@
--- find avarage
-SELECT AVG(score) FROM second_table;
+-- find average
+SELECT AVG(score) AS average FROM second_table;
