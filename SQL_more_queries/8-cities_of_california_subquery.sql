@@ -1,9 +1,11 @@
 -- salam
 SELECT id, name
 FROM cities
-WHERE id IN(
-  SELECT 
-  )
+WHERE state_id IN(
+  SELECT id
+  FROM states
+  WHERE id=1
+  );
 
 
 
