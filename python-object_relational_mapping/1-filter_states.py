@@ -16,7 +16,7 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     try:
-        cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id""")
+        cursor.execute("""SELECT * FROM states WHERE name LIKE "N%" ORDER BY id""")
         rows = cursor.fetchall()
     except MySQLdb.Error as e:
         print(e)
