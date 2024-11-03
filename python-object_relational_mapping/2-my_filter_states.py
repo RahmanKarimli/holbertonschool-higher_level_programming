@@ -15,9 +15,9 @@ if __name__ == "__main__":
         db=argv[3]
     )
     cursor = db.cursor()
-    query = """SELECT * FROM states WHERE name LIKE "{:s}" ORDER BY id""".format(argv[4])
+    query = """SELECT * FROM states WHERE name LIKE "{:s}" ORDER BY id"""
     try:
-        cursor.execute(query)
+        cursor.execute(query.format(argv[4]))
         rows = cursor.fetchall()
     except MySQLdb.Error as e:
         print(e)
