@@ -15,7 +15,7 @@ if __name__ == "__main__":
         db=argv[3]
     )
     cursor = db.cursor()
-    query = f"""SELECT * FROM states WHERE name LIKE "{argv[4]}" ORDER BY id"""
+    query = """SELECT * FROM states WHERE name LIKE "{:s}" ORDER BY id""".format(argv[4])
     try:
         cursor.execute(query)
         rows = cursor.fetchall()
