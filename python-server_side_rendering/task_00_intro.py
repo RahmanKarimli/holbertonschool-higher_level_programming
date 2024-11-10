@@ -27,9 +27,7 @@ def generate_invitations(template, attendees):
         template_schema = template
         for key in attendees[i].keys():
             placeHolder = "{" + f"{key}" + "}"
-            value = "N/A"
-            if attendees[i].get(key) is not None:
-                value = attendees[i].get(key)
+            value = attendees.get(key) or "N/A"
             template_schema = template_schema.replace(placeHolder, value)
 
         if not exists(f"output_{i + 1}.txt"):
