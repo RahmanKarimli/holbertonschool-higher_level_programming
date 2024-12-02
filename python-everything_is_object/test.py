@@ -32,6 +32,14 @@ a = ("a")
 print(type(a))
 
 
+print("-------")
+a = (1)
+b = (1)
+print(a is b)
+
+
+
+
 
 
 
