@@ -27,7 +27,9 @@ inc(a)
 print(a)
 
 
-
+print("-------")
+a = ("a")
+print(type(a))
 
 
 
